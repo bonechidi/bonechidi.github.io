@@ -1,265 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-21CE7NTQVF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>We’ve moved to debone.vercel.app</title>
+<meta name="description" content="This site has a new home at debone.vercel.app. You’ll be redirected automatically.">
+<meta name="theme-color" content="#0d0f2b">
+<link rel="canonical" href="https://debone.vercel.app/">
+<noscript><meta http-equiv="refresh" content="3; url=https://debone.vercel.app/"></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0f2b; --bg2:#171a4a; --ink:#f4f2ff; --mute:#a9a7d6;
+  --violet:#7c5cff; --aqua:#3ef0d0; --coral:#ff6b8a;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{
+  background:radial-gradient(120% 90% at 50% 0%,var(--bg2),var(--bg) 60%);
+  color:var(--ink);font-family:var(--body);overflow-x:hidden;
+  padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0);
+}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);opacity:.45;z-index:0;pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
+.o1{width:46vmax;height:46vmax;background:var(--violet);top:-18vmax;left:-12vmax}
+.o2{width:38vmax;height:38vmax;background:var(--aqua);bottom:-20vmax;right:-10vmax;opacity:.28;animation-duration:24s}
+.o3{width:24vmax;height:24vmax;background:var(--coral);top:40%;left:55%;opacity:.18;animation-duration:30s}
+@keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
 
-  gtag('config', 'G-21CE7NTQVF');
-</script>
+main{position:relative;z-index:1;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.4rem;padding:3rem 1.25rem;text-align:center}
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3575138423106905"
-     crossorigin="anonymous"></script>
-    <title>Debone Photos and Video Editing Studio</title>
+h1{font-family:var(--display);font-weight:800;font-size:clamp(3rem,11vw,7.5rem);line-height:.95;letter-spacing:-.04em}
+h1 span{display:inline-block;opacity:0;transform:translateY(60%) rotate(6deg);filter:blur(10px);animation:pop .9s cubic-bezier(.2,.9,.2,1) forwards;animation-delay:calc(var(--i)*55ms + 200ms)}
+h1 .g{background:linear-gradient(100deg,var(--aqua),var(--violet) 60%,var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:pop .9s cubic-bezier(.2,.9,.2,1) forwards,shine 5s linear 1.4s infinite;animation-delay:calc(var(--i)*55ms + 200ms),0s}
+@keyframes pop{to{opacity:1;transform:none;filter:none}}
+@keyframes shine{to{background-position:-200% 0}}
+
+.sub{max-width:34rem;color:var(--mute);font-size:clamp(1rem,2.4vw,1.2rem);line-height:1.6;opacity:0;animation:rise .8s ease 1.1s forwards}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* the handoff */
+.route{display:flex;align-items:center;gap:0;width:min(46rem,100%);opacity:0;animation:rise .8s ease 1.4s forwards}
+.node{flex:0 0 auto;padding:.85rem 1.2rem;border-radius:999px;font-weight:700;font-size:clamp(.78rem,2.6vw,1rem);white-space:nowrap}
+.old{border:1px dashed rgba(169,167,214,.45);color:var(--mute);position:relative}
+.old::after{content:"";position:absolute;left:1.1rem;right:1.1rem;top:50%;height:2px;background:var(--coral);transform:scaleX(0);transform-origin:left;animation:strike .6s ease 2.2s forwards}
+@keyframes strike{to{transform:scaleX(1)}}
+.new{background:linear-gradient(135deg,var(--violet),#5a3df0);box-shadow:0 0 0 0 rgba(124,92,255,.6),0 10px 40px -10px var(--violet);animation:pulse 2.4s ease-out 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 18px rgba(124,92,255,0),0 10px 40px -10px var(--violet)}100%{box-shadow:0 0 0 0 rgba(124,92,255,0),0 10px 40px -10px var(--violet)}}
+.track{position:relative;flex:1;height:2px;min-width:2rem;background:repeating-linear-gradient(90deg,rgba(169,167,214,.5) 0 6px,transparent 6px 12px)}
+.packet{position:absolute;top:50%;left:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--aqua);box-shadow:0 0 18px 4px var(--aqua);animation:travel 2s cubic-bezier(.6,0,.3,1) infinite}
+.packet:nth-child(2){animation-delay:.66s;opacity:.7;transform:scale(.7)}
+.packet:nth-child(3){animation-delay:1.32s;opacity:.5;transform:scale(.5)}
+@keyframes travel{0%{left:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{left:100%;opacity:0}}
+
+/* countdown */
+.go{display:flex;flex-direction:column;align-items:center;gap:1.3rem;opacity:0;animation:rise .8s ease 1.7s forwards}
+.ring{position:relative;width:104px;height:104px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:5}
+.ring .bg{stroke:rgba(255,255,255,.1)}
+.ring .fg{stroke:url(#grad);stroke-linecap:round;stroke-dasharray:289;stroke-dashoffset:0}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:800 2.2rem var(--display)}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center}
+.btn{font:700 1rem var(--body);padding:.95rem 1.7rem;border-radius:999px;border:1px solid transparent;cursor:pointer;text-decoration:none;color:var(--ink);transition:transform .25s,box-shadow .25s,background .25s}
+.primary{background:linear-gradient(135deg,var(--aqua),#2bc7ff);color:#04122b;box-shadow:0 12px 40px -12px var(--aqua)}
+.primary:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 50px -10px var(--aqua)}
+.ghost{background:transparent;border-color:rgba(255,255,255,.22)}
+.ghost:hover{background:rgba(255,255,255,.08)}
+.btn:active{transform:scale(.97)}
+.btn:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.note{color:var(--mute);font-size:.85rem;min-height:1.2em}
+
+@media (max-width:520px){
+  .route{flex-direction:column;gap:.4rem}
+  .track{width:2px;height:3.2rem;min-width:0;flex:none;background:repeating-linear-gradient(180deg,rgba(169,167,214,.5) 0 6px,transparent 6px 12px)}
+  .packet{left:50%!important;margin:-7px 0 0 -7px;animation-name:travelY}
+  @keyframes travelY{0%{top:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:100%;opacity:0}}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important}
+  #sky{display:none}
+}
+</style>
 </head>
-<link rel="stylesheet" href="home.css">
 <body>
-<!-- Adskeeper Sensor -->  
- <script type="text/javascript"> (function() { var d = document, w = window; w.MgSensorData = w.MgSensorData || []; w.MgSensorData.push({ cid:774219, lng:"us", project: "a.adskeeper.co.uk" }); var l = "a.adskeeper.co.uk"; var n = d.getElementsByTagName("script")[0]; var s = d.createElement("script"); s.type = "text/javascript"; s.async = true; var dt = !Date.now?new Date().valueOf():Date.now(); s.src = "https://" + l + "/mgsensor.js?d=" + dt; n.parentNode.insertBefore(s, n); })();  
- </script>  
- <!-- /Adskeeper Sensor --> 
- 
-    
-<div class="container-fluid">
-<div class="container">
-    <img class="logo"  ><h1>DeBoNe</h1>
-    
-    <nav>
-        
-        <ul>
-            <li><a href="">Home</li>
-            <li><a href="about">About us</a></li>
-            <li><a href="video">Video</a></li>
-            <li><a href="terms and condition">Terms and Condition</a></li>
-            <li><a href="Privacy.htm">Privacy Policy</a></li>
-        </ul>
-    </nav>
-    <div>
-        <button class="btn"> <a href="contact.html">Contact Now</a></button>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+
+<main>
+  <h1 aria-label="We’ve moved.">
+    <span style="--i:0">We’ve</span> <span class="g" style="--i:1">moved.</span>
+  </h1>
+  <p class="sub">This site has a brand-new home with a fresh design and everything in one place. We’re taking you there now.</p>
+
+  <div class="route" aria-hidden="true">
+    <div class="node old">bonechidi.github.io</div>
+    <div class="track"><i class="packet"></i><i class="packet"></i><i class="packet"></i></div>
+    <div class="node new">debone.vercel.app</div>
+  </div>
+
+  <div class="go">
+    <div class="ring" role="timer" aria-live="off">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3ef0d0"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs>
+        <circle class="bg" cx="50" cy="50" r="46"/>
+        <circle class="fg" id="fg" cx="50" cy="50" r="46"/>
+      </svg>
+      <b id="count">6</b>
     </div>
+    <div class="btns">
+      <a class="btn primary" id="now" href="https://debone.vercel.app/">Go to the new site</a>
+      <button class="btn ghost" id="pause" type="button">Stay here</button>
     </div>
-    <header>
-        <div class="content">
-         <h1> <li><a href="https://sites.google.com/view/debone-press/product?authuser=0">Quality<span>Products</span><br>for Everyone<br>Worldwide</a></li></h1>
-            <p>We're a company that focuses in offering<br>Quality product, goods and services to<br> people in any part of the world</p>
-            <button class="btn"><a href="contact.html"> Contact Now</a></button>
-        </div>
-        <div class="image">
-            <img src="images/100.jpg">
-        </div>
-    </header>
-    </div>
-</div>
+    <p class="note" id="note">Redirecting automatically…</p>
+  </div>
+</main>
 
+<script>
+(function(){
+  /* ---- Settings ---- */
+  var NEW_URL = "https://debone.vercel.app/";
+  var SECONDS = 6;           // countdown length
+  var KEEP_PATH = false;     // true: bonechidi.github.io/about -> debone.vercel.app/about
 
+  var target = NEW_URL;
+  if (KEEP_PATH) {
+    target = NEW_URL.replace(/\/$/, "") + location.pathname + location.search + location.hash;
+  }
+  document.getElementById("now").href = target;
 
-    <div class="about-main">
-        <div class="about">
-            <div class="image">
-            <img src="images/4.jpeg">
-        </div>
-        <div class="content">
-            <h4> PHOTO EDITING TRAINING</h4>
-            <h2>Photo Editing training<br> life in Port Harcourt</h2>
-            <p>Photoshop is arguably the most time-tested photo
-                 editing<br> software available. Photoshop allows 
-                 you to <br>edit, analyze, and arrange photos and 
-                 videos<br> using a robust toolkit of professional
-                 -quality<br> digital editing tools.<br></p>
-                     <button class="btn"><a href="contact.html"> Contact Now</a></button>
-        </div>
-    </div>
-    
-    <div class="about-main">
-        <div class="about">
-            <div class="image">
-            <img src="images/5.jpeg">
-        </div>
-        <div class="content">
-            <h4> PRINTER REPAIR</h4>
-            <h2> Printer repair training<br> going on in Port Harcourt</h2>
-            <p>We repair printer and give quality maintenance
-                 <br> to the printer. if your printer is spoilt contact 
-                  <br>debone now by click contact now and he will get
-                  <br>back to you. <br></p>
-                     <button class="btn"><a href="contact.html"> Contact Now</a></button>
-</div>
-</div>
-<div class="about-main">
-    <div class="about">
-        <div class="image">
-        <img src="images/17.jpeg">
-    </div>
-    <div class="content">
-        <h4> COMPUTER REPAIR</h4>
-        <h2>Computer repair training<br> going on in Port Harcourt</h2>
-        <p>we repair all kinds of computer system and we<br>
-            give quality maintenance to the computer system.<br>
-            if you have any spoit system contact debone now<br>
-            by clicking contact now.<br></p>
-                 <button class="btn"><a href="contact.html"> Contact Now</a></button>
-</div>
-</div>
+  /* ---- Countdown ---- */
+  var fg = document.getElementById("fg"), num = document.getElementById("count"),
+      note = document.getElementById("note"), btn = document.getElementById("pause");
+  var C = 289, total = SECONDS * 1000, left = total, last = null, paused = false, done = false;
+  var started = false;
 
-<div class="about-main">
-    <div class="about">
-        <div class="image">
-        <img src="images/15.jpeg">
-    </div>
-    <div class="content">
-        <h4> VIDEO EDITING TRAINING</h4>
-        <h2>Video Editing training<br> life in Port Harcourt</h2>
-        <p>Video Editing training going on in Port Harcourt<br>
-            and we expertize mainly on Pinnacle studio <br>
-            software which we use to teach our student, and<br>
-            and also Adobe Premier Pro<br></p>
-                 <button class="btn"><a href="contact.html"> Contact Now</a></button>
-</div>
-</div>
-<div class="about-main">
-    <div class="about">
-        <div class="image">
-        <img src="images/9.jpeg">
-    </div>
-    <div class="content">
-        <h4> COMPUTER ACCESSORIES STORE</h4>
-        <h2>Get the best quality<br> at cheap prices</h2>
-        <p>We are interested in offering Quality product to<br>
-            our customers at cheap prices. Click See more to <br>
-            view our product. <a href="">SEE MORE -></a><br>
-            </p>
-                 <button class="btn"><a href="contact.html"> Contact Now</a></button>
-</div>
-</div>
-
-<div class="about-main">
-    <div class="about">
-        <div class="image">
-        <img src="images/8.jpeg">
-    </div>
-    <div class="content">
-        <h4>COMPUTER TRAINING SCHOOL </h4>
-        <h2>Computer training<br> life in Port Harcourt</h2>
-        <p>We educate student on how to use the computer<br>
-            and Make them be computer professionals<br>
-            Anyone who graduate from our schoool usually<br>
-            get job easily, because we ensure that quality <br>
-            teaching is maintained 
-            <br></p>
-                 <button class="btn"><a href="contact.html"> Contact Now</a></button>
-</div>
-</div>
-
-<div class="about-main">
-    <div class="about">
-        <div class="image">
-        <img src="images/12.jpeg">
-    </div>
-    <div class="content">
-        <h4> CYBER CAFE</h4>
-        <h2>Business Center <br>  in Port Harcourt</h2>
-        <p>we expertize in Di printing, Flex Printing; Typing and <br>
-            Photocopy, Flyers, Paper bag, Internet Service, monogramy<br>
-            Posters, banners, Souvenir, Passport Photograph, Id card,<br>
-            Graphic Design, and so many more. for more inquiry, vist<br>
-            179 old refinery road, elelenwo, port harcourt, Rivers State,<br> 
-            Nigeria. or contact debone by clicking contact now.
-            <br></p>
-                 <button class="btn"><a href="contact.html"> Contact Now</a></button>
-</div>
-</div>
-
-<div class="about-main">
-    <div class="about">
-        <div class="image">
-        <img src="images/13.jpeg">
-    </div>
-    <div class="content">
-        <h4> PHOTOGRAPHY & VIDEOGRAPHY</h4>
-        <h2>Videography and Photography training<br> going on in Port Harcourt</h2>
-        <p>We cover so many event and we give the best to our<br>
-            customers, We cover Wedding, Birthday, Burial, Marriage,<br> 
-            Sport, Film/ movie and many more. Just Contact Debone <br>
-            you need a photographer or videographer<br></p>
-                 <button class="btn"><a href="contact.html"> Contact Now</a></button>
-</div>
-</div>
-
-<div class="contact-main">
-    <div class="contact">
-      <div class="image">
-          <img src="">
-      </div>
-      <div class="content">
-          <h4>CONTACT</h4>
-          <h2>Got any question?<br> Don't hesitate to get in touch</h2>
-          <h3>Head Office</h3>
-          <h5>179 Old Refinery Road Elelenwo, Port Harcourt Rivers State</h5>
-          <h3>Branch office</h3>
-          <h5>Umusukpu Playground, Igbo Etche, Rivers State</h5>
-          <h3>Phone</h3>
-          <h5>(+234) 08035988889, 08139763301, 08150861023</h5>
-          <h3>E-mail</h3>
-          <h5>bonechidi@gmail.com</h5>
-      </div>  
-    </div>
-
-<div>
-<div id="smart-button-container">
-      <div style="text-align: center;">
-        <div id="paypal-button-container"></div>
-      </div>
-    </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-  <script>
-    function initPayPalButton() {
-      paypal.Buttons({
-        style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'paypal',
-          
-        },
-
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{"description":"Website development, building and design","amount":{"currency_code":"USD","value":1}}]
-          });
-        },
-
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(orderData) {
-            
-            // Full available details
-            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-            // Show a success message within this page, e.g.
-            const element = document.getElementById('paypal-button-container');
-            element.innerHTML = '';
-            element.innerHTML = '<h3>Thank you for your payment!</h3>';
-
-            // Or go to another URL:  actions.redirect('thank_you.html');
-            
-          });
-        },
-
-        onError: function(err) {
-          console.log(err);
-        }
-      }).render('#paypal-button-container');
+  function tick(t){
+    if (done) return;
+    if (!started) { started = true; last = t; }
+    if (!paused) {
+      left -= (t - last);
+      if (left <= 0) { done = true; num.textContent = "0"; fg.style.strokeDashoffset = C; location.replace(target); return; }
+      fg.style.strokeDashoffset = C * (1 - left / total);
+      num.textContent = Math.ceil(left / 1000);
     }
-    initPayPalButton();
-  </script>
-    <div class="design">
-        <footer>@Design by Chris Dani</footer>
-    </div>
-</div>
-</div>
+    last = t;
+    requestAnimationFrame(tick);
+  }
+  setTimeout(function(){ requestAnimationFrame(tick); }, 1800); // starts after the intro
+
+  btn.addEventListener("click", function(){
+    paused = !paused;
+    btn.textContent = paused ? "Resume redirect" : "Stay here";
+    note.textContent = paused ? "Paused. Use the button when you’re ready." : "Redirecting automatically…";
+  });
+
+  /* ---- Star stream: particles drift toward the new home ---- */
+  var cv = document.getElementById("sky"), cx = cv.getContext("2d"), W, H, DPR, P = [];
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  function size(){
+    DPR = Math.min(devicePixelRatio || 1, 2);
+    W = cv.width = innerWidth * DPR; H = cv.height = innerHeight * DPR;
+    var n = Math.min(140, Math.floor(innerWidth / 9));
+    P = []; for (var i = 0; i < n; i++) P.push(spawn(true));
+  }
+  function spawn(init){
+    return { x: init ? Math.random()*W : -20, y: Math.random()*H,
+             v: (.4 + Math.random()*1.6) * DPR, r: (.5 + Math.random()*1.6) * DPR,
+             h: Math.random() < .5 ? 168 : 255, a: .25 + Math.random()*.6 };
+  }
+  var mx = .5, my = .5;
+  addEventListener("pointermove", function(e){ mx = e.clientX / innerWidth; my = e.clientY / innerHeight; });
+  function draw(){
+    cx.clearRect(0, 0, W, H);
+    var tx = W * (.5 + (mx - .5) * .15), ty = H * (.5 + (my - .5) * .15);
+    for (var i = 0; i < P.length; i++){
+      var p = P[i];
+      p.x += p.v * 1.6;
+      p.y += (ty - p.y) * .0012 * p.v;       // gentle pull toward the center
+      if (p.x > W + 20) P[i] = spawn(false);
+      cx.beginPath();
+      cx.fillStyle = "hsla(" + p.h + ",90%,70%," + p.a + ")";
+      cx.arc(p.x, p.y, p.r, 0, 6.283); cx.fill();
+      cx.strokeStyle = "hsla(" + p.h + ",90%,70%," + (p.a * .25) + ")";
+      cx.lineWidth = p.r; cx.beginPath(); cx.moveTo(p.x, p.y); cx.lineTo(p.x - p.v * 14, p.y - (ty - p.y) * .01); cx.stroke();
+    }
+    requestAnimationFrame(draw);
+  }
+  addEventListener("resize", size);
+  size(); draw();
+})();
+</script>
 </body>
 </html>
-
